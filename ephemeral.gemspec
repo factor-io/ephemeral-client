@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.license       = "MIT"
 
   s.test_files    = Dir.glob("./{test,spec,features}/*.rb")
-  s.executables   = ['ephemeral']
+  s.executables   = ['eph']
   s.require_paths = ['lib']
 
   s.add_runtime_dependency 'thor', '~> 0.19', '>= 0.19.1'
