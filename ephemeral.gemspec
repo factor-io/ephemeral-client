@@ -3,7 +3,7 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'ephemeral/version'
 
 Gem::Specification.new do |s|
-  s.name          = 'ephemeral'
+  s.name          = 'eph'
   s.version       = Ephemeral::VERSION
   s.platform      = Gem::Platform::RUBY
   s.authors       = ['Maciej Skierkowski']

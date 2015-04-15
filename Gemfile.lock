@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ephemeral (0.1.00)
+    eph (0.1.00)
       thor (~> 0.19, >= 0.19.1)
 
 GEM
@@ -38,6 +38,6 @@ PLATFORMS
 
 DEPENDENCIES
   codeclimate-test-reporter (~> 0.4.7)
-  ephemeral!
+  eph!
   rake (~> 10.4, >= 10.4.2)
   rspec (~> 3.2, >= 3.2.0)
