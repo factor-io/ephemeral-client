@@ -21,6 +21,6 @@ describe 'Ephemeral::Client' do
   it 'returns a hash which contains an id' do
     test_client = Ephemeral::Client.new
     response = test_client.build("ruby:2.1", "https://github.com/skierkowski/hello-middleman", "middleman")
-    expect(response['id'].nil?).to equal false
+    expect(response).to have_key('id')
   end
 end
