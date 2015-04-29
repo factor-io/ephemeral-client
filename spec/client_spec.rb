@@ -15,6 +15,6 @@ describe 'Ephemeral::Client' do
   it 'returns a string' do
     test_client = Ephemeral::Client.new
     response = test_client.build("test", "test", "test")
-    expect(response).to be_an_instance_of String
+    expect(response).to be_an_instance_of Hash
   end
 end
