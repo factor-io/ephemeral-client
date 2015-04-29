@@ -5,7 +5,7 @@ module Ephemeral
   class Client
     def build(image, repo, command)
 
-      response = RestClient.post('ephemeral-io.herokuapp.com/api/v1/builds',
+      response = RestClient.post('api.ehpemeral.io/v1/builds',
         {
           image:   image,
           repo:    repo,
