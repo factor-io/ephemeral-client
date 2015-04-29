@@ -26,7 +26,7 @@ module Ephemeral
 
     def gen_uri(resource)
       uri = URI.parse(BASE)
-      uri.path = "/api/v1/#{resource}"
+      uri.path = "/v1/#{resource}"
       uri.to_s
     end
   end
