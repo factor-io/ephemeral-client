@@ -1,7 +1,6 @@
 require 'rest-client'
 require 'uri'
 require 'json'
-require 'pry'
 
 module Ephemeral
   class Client
