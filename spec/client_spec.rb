@@ -14,7 +14,7 @@ describe 'Ephemeral::Client' do
 
   it 'returns a string' do
     test_client = Ephemeral::Client.new
-    response = test_client.build("test", "test", "test")
+    response = test_client.build("ruby:2.1", "https://github.com/skierkowski/hello-middleman", "middleman")
     expect(response).to be_an_instance_of Hash
   end
 end
