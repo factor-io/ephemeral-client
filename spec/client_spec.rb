@@ -12,9 +12,9 @@ describe 'Ephemeral::Client' do
     }.to raise_error ArgumentError
   end
 
-  it 'returns an id' do
+  it 'returns a string' do
     test_client = Ephemeral::Client.new
     response = test_client.build("test", "test", "test")
-    expect(response).to have_type String
+    expect(response).to be_an_instance_of String
   end
 end
