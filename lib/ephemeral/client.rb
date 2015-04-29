@@ -1,5 +1,6 @@
 require 'rest-client'
-require 'pry'
+require 'uri'
+require 'json'
 
 module Ephemeral
   class Client
@@ -21,6 +22,14 @@ module Ephemeral
     end
 
     private
+
+    def post(resource, options)
+      uri = gen_uri(resource)
+
+      response = RestClient.post(uri, options)
+
+      content = JSON.parse(response)
+    end
 
     def gen_uri(resource)
       uri = URI.parse(BASE)
