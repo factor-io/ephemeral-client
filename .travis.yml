@@ -2,3 +2,11 @@ language: ruby
 rvm:
 - 2.2.1
 - 2.2.2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: pWyEDWqCwuzooGU+NHVDT4IEIJUnBvzNKbDEJeewgjJvtYgSTxPV6oSGH3hAqtrQVwCqRaNdN+8Fe1Ga5/LsvfCEeAkuNNAQk2QzzRU7XD+B9unDb2ngpnkTkP74xcYec2u3HPLfYTw3zZQl00p7GkRfPHaA1XXXTacxkTVspQM=
+  gem: ephemeral-client
+  on:
+    tags: true
+    repo: factor-io/ephemeral-client
