@@ -3,7 +3,11 @@ require 'ephemeral/client'
 
 module Ephemeral
   module Commands
+    
+    # The Commander command to start the build command
     class Build
+
+      # This starts the build. Don't use this directly, this is for use by Commander CLI
       def build(args, options)
         client    = Ephemeral::Client.new
         source    = args[0]

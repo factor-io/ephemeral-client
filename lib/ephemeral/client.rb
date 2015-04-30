@@ -3,9 +3,16 @@ require 'uri'
 require 'json'
 
 module Ephemeral
+
+  # The primary client library for the Ephemeral.io service
   class Client
     BASE = 'http://api.ephemeral.io/'
 
+    # Starts a build on the Ephemeryl service
+    # @param image [String] The Docker image from https://github.com/docker-library/docs
+    # @param repo [String] The URL containing the source to build
+    # @param build_type [String] The framework to use (e.g. `jekyll`, `middleman`)
+    # @return [Hash] The hash containing basic information about the build (e.g. id)
     def build(image, repo, build_type)
       resource = "builds"
 
