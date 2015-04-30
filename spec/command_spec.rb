@@ -1,7 +1,8 @@
 # encoding: UTF-8
 
 require 'spec_helper'
-require 'ephemeral/command'
+require 'ephemeral/commands/build'
+require 'commander'
 require 'securerandom'
 
 describe Ephemeral::Commands do
