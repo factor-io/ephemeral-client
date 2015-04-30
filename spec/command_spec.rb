@@ -15,5 +15,15 @@ describe Ephemeral::Commands do
       build_command = Ephemeral::Commands::Build.new
       expect{build_command.build(args,options)}.to output(/Starting build/).to_stdout
     end
+
+    it 'fails without all params' do
+      args = ["https://github.com/skierkowski/hello-middleman"]
+      options = Commander::Command::Options.new
+      options.buildpack = 'ruby:2.1'
+      build_command = Ephemeral::Commands::Build.new
+      expect{
+        build_command.build(args,options)
+      }.to output(/framework is required/).to_stderr.and raise_error(SystemExit)
+    end
   end
 end
