@@ -7,7 +7,6 @@ module Ephemeral
       def build(args, options)
         client    = Ephemeral::Client.new
         source    = args[0]
-
         fail 'Source URL is required' unless source
         fail '--framework is required' unless options.framework
         fail '--buildpack is required' unless options.buildpack
