@@ -8,6 +8,9 @@ module Ephemeral
     class Build
 
       # This starts the build. Don't use this directly, this is for use by Commander CLI
+      # @param args [Array[String]] Should be an array of strings with the source, but length must be 1
+      # @param [Commander::Command::Options.new] Required command line options for framework and buildpack
+      # @return [Boolean] always returns true
       def build(args, options)
         client    = Ephemeral::Client.new
         source    = args[0]
