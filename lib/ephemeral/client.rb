@@ -22,6 +22,7 @@ module Ephemeral
       uri = gen_uri(resource)
       response = RestClient.post(uri, options)
       content = JSON.parse(response)
+      content
     end
 
     def gen_uri(resource)
