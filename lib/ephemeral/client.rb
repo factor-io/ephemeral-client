@@ -8,7 +8,7 @@ module Ephemeral
   class Client
     BASE = 'http://api.ephemeral.io/'
 
-    # Starts a build on the Ephemeryl service
+    # Starts a build on the Ephemeral service
     # @param image [String] The Docker image from https://github.com/docker-library/docs
     # @param repo [String] The URL containing the source to build
     # @param build_type [String] The framework to use (e.g. `jekyll`, `middleman`)
