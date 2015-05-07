@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.executables   = ['eph']
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'commander', '~> 4.3', '>= 4.3.3'
+  s.add_runtime_dependency 'commander', '~> 4.3', '>= 4.3.4'
   s.add_runtime_dependency 'rest-client', '~> 1.8', '>= 1.8.0'
   s.add_runtime_dependency 'rainbow', '~> 2.0', '>= 2.0.0'
   
