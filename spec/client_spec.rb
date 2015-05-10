@@ -25,4 +25,13 @@ describe 'Ephemeral::Client' do
       expect(response).to have_key('id')
     end
   end
+
+  describe 'getLogs' do
+    it 'returns array from id' do
+      test_client = Ephemeral::Client.new
+      response = test_client.build("ruby:2.1", "https://github.com/skierkowski/hello-middleman", "middleman")
+      logs = test_client.getLogs(response['id'])
+      expect(logs).to be_an_instance_of(Array)
+    end
+  end
 end
