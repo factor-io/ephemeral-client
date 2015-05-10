@@ -32,6 +32,13 @@ module Ephemeral
       content
     end
 
+    def get(resource, options)
+      uri = gen_uri(resource)
+      response = RestClient.get(uri, options)
+      content = JSON.parse(response)
+      content
+    end
+
     def gen_uri(resource)
       uri = URI.parse(BASE)
       uri.path = "/v1/#{resource}"
