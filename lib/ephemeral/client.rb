@@ -23,6 +23,12 @@ module Ephemeral
         })
     end
 
+    def getLogs(id)
+      resource = "builds/#{id}/logs"
+
+      get(resource, {})
+    end
+
     private
 
     def post(resource, options)
