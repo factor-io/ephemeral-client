@@ -26,19 +26,19 @@ module Ephemeral
     def getLogs(id)
       resource = "builds/#{id}/logs"
 
-      get(resource, {})
+      get(resource)
     end
 
     private
 
-    def post(resource, options)
+    def post(resource, options={})
       uri = gen_uri(resource)
       response = RestClient.post(uri, options)
       content = JSON.parse(response)
       content
     end
 
-    def get(resource, options)
+    def get(resource, options={})
       uri = gen_uri(resource)
       response = RestClient.get(uri, options)
       content = JSON.parse(response)
