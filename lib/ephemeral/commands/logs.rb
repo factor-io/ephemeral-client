@@ -11,6 +11,7 @@ module Ephemeral
         id     = args[0]
         fail 'Ephemeral build id is required' unless id
 
+        info "Retrieving logs for build #{id}"
         response = client.getLogs(id)
         success "Retrieved logs for build #{id}:\n#{response}"
       end
@@ -23,6 +24,10 @@ module Ephemeral
 
       def success(message)
         puts Rainbow(message).green
+      end
+
+      def info(message)
+        puts Rainbow(message).bright
       end
     end
   end
