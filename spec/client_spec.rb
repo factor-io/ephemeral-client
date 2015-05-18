@@ -2,6 +2,7 @@
 
 require 'spec_helper'
 require 'ephemeral/client'
+require 'pry'
 
 describe 'Ephemeral::Client' do
   
@@ -28,10 +29,10 @@ describe 'Ephemeral::Client' do
 
   describe 'getLogs' do
     it 'returns array from id' do
-      # test_client = Ephemeral::Client.new
-      # response = test_client.build("ruby:2.1", "https://github.com/skierkowski/hello-middleman", "middleman")
-      # logs = test_client.getLogs(response['id'])
-      # expect(logs).to be_an_instance_of(Array)
+      test_client = Ephemeral::Client.new
+      response = test_client.build("ruby:2.1", "https://github.com/skierkowski/hello-middleman", "middleman")
+      logs = test_client.getLogs(response['id'])
+      expect(logs).to be_an_instance_of Array
     end
   end
 end
