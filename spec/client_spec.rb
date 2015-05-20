@@ -2,7 +2,6 @@
 
 require 'spec_helper'
 require 'ephemeral/client'
-require 'pry'
 
 describe 'Ephemeral::Client' do
   
